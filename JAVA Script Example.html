@@ -1,0 +1,53 @@
+<html>
+	<head>
+	
+		<title>Java Script Example</title>
+		
+		<script>
+			function helloUser(){
+				txt = window.prompt("Please Enter Your Name","Mr ");
+				if(txt == null || txt ==""){
+				}
+				else{
+					document.getElementById("user").innerHTML = "Hello "+txt;
+				}
+			}
+				
+			function myNameIsYanshu(){
+				window.alert("This is alert \n You just click on the add button");
+				
+				if(window.confirm("This is Confirm PopUp \n Do You Want to Add these digits")){
+					var a = parseInt(document.getElementById("n1").value);
+					var b = parseInt(document.getElementById("n2").value);
+					
+					var c = a+b;
+					if(isNaN(c)){
+						document.getElementById("add").innerHTML = "Number is Invalid";
+					}
+					else{
+						document.getElementById("add").innerHTML = c;
+					}
+				}
+				else{
+						document.getElementById("add").innerHTML = "";
+					}
+			}
+		</script>
+	
+	</head>
+	
+	<body onload="helloUser()" align="center">
+	<br><br><br>
+	<h1 id="user"></h1>
+	
+	Enter First Number  :<input type="text" id="n1" size ="5px" />
+	<br><br>
+	Enter Second Number:<input type="text" id="n2" size ="5px" />
+	<br><br>
+	
+	<h3 id="add"></h3>
+	<br><br>
+	<button onclick="myNameIsYanshu()">Add</button>
+	</body>
+	
+</html>
